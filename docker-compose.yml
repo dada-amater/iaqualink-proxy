@@ -4,3 +4,7 @@ services:
     build: .
     ports:
       - "8000:8000"
+    deploy:
+        restart_policy:
+            condition: unless-stopped
+            delay: 60s
