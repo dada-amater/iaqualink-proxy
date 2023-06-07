@@ -16,5 +16,5 @@ Then query the API at `http://localhost:8000/?email=<iAqualinkEmail>&password=<i
 
 ## How to build
 ```shell
-docker buildx build . --platform linux/amd64,linux/arm64 --push -t dadaamater/iaqualink-proxy:latest
+docker buildx build . --platform linux/amd64,linux/arm64,linux/arm/v7 --push -t dadaamater/iaqualink-proxy:latest
 ```
