@@ -17,6 +17,9 @@ async function login(email, password) {
         headers: {
             'Content-type': 'application/json; charset=UTF-8',
         }
+    }).catch((err) => {
+        console.error(err)
+        return null;
     })
 
     return  response.status === 200 ? await response.json() : null;
@@ -36,6 +39,9 @@ async function getDeviceStatus(email, password, sn) {
             'User-Agent': 'okhttp/3.12.0',
             'Accept-Encoding': 'gzip'
         },
+    }).catch((err) => {
+        console.error(err)
+        return 'Timeout';
     })
 
     return  await response.json();
