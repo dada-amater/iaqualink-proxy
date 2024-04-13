@@ -22,7 +22,7 @@ async function login(email, password) {
         return null;
     })
 
-    return  response.status === 200 ? await response.json() : null;
+    return  response !== null && response.status === 200 ? await response.json() : null;
 }
 
 async function getDeviceStatus(email, password, sn) {
